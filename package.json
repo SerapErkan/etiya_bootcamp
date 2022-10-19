@@ -1,0 +1,20 @@
+{
+  "name": "etiya_bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node mapFilterReduce.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serapkantar/etiya_bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serapkantar/etiya_bootcamp/issues"
+  },
+  "homepage": "https://github.com/serapkantar/etiya_bootcamp#readme"
+}
