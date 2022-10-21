@@ -11,8 +11,18 @@ let products = [
   { unitPrice: 100, productName: "f", discount: true, rate: 15 },
   { unitPrice: 150, productName: "Ürün2", discount: false, rate: 0 },
   { unitPrice: 200, productName: "a3", discount: true, rate: 2.5 },
-//   { unitPrice: 200, productName: "fff", discount: true, rate: 2.5 }, // 2-test 
+  { unitPrice: 200, productName: "fff", discount: true, rate: 2.5 }, // 2-test 
 ];
+
+
+//ürün ekleme
+function AddedProduct(unitPrice,productName,discount,rate){
+    let obj = {unitPrice:unitPrice,productName:productName,discount:discount,rate:rate}
+    return products.push(obj);
+}
+
+AddedProduct(5000,"cikolata",true,50);
+allProduct();
 
 //////////////
 
@@ -63,13 +73,13 @@ const NameFilter = function (productName) {
   });
   console.log(filter);
 };
-NameFilter("Ürün1");
+NameFilter("a3");
 
 ///////////
 console.log("-7tüm ürünleri getir ");
 
 function allProduct(){
-    console.log( products);   
+    console.log( "tüm ürünler",products);   
     }
 allProduct();
 
@@ -96,7 +106,7 @@ function getArrangement(productName){
         let filter = products.filter((p,i) => {
           return p.productName.includes(productName);
         });
-        console.log("filitrelenen ilk değer",filter[0],filter[1]);
+        console.log("filitrelenen ilk değer",filter[0],"\n", "filitrelenen ikinci değer",filter[1]);
       };
 
 getArrangement("f");
