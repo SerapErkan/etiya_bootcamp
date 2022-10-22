@@ -1,4 +1,4 @@
- 
+ /*
 var name="SRP";
 name="123";
 var name ="Serap"; //unutulum bir çok yerde bir çok kez tanımlana bilir güvenilir değil !
@@ -178,9 +178,138 @@ myMap.set(key3,"function");
 console.log(myMap.get(key1));
 console.log(myMap.get(key2));
 
+*/
+
 
 // myMap.size map boyutu 
 // map keys map value
+
+
+//* js -OOP
+
+//constructor
+
+//
+// function Employee(name,age,salary){
+//     this.name=name;
+//     this.age=age;
+//     this.salary=salary;
+//     this.showInfos=function(){
+//         console.log("showInfos",this.name,this.age,this.salary);
+//     }
+
+//     console.log(this);
+//     //cıktı : Employee { name: 'ys', age: 63, salary: 5000 }
+// }
+
+
+// const emp1=new Employee("ys",63,5000);
+// const emp2=new Employee("ss",40,8000);
+
+// emp1.showInfos();
+
+//fonksiyon ekleme 
+// Employee.prorotype.showInfos=function(){
+//     console.log("ısim "+this.name);
+// }
+
+
+
+////// static methodlar 
+
+// class Matematik{
+//     cube(x){
+//         console.log(x*x*x);
+
+//     }
+// }
+
+// const math=new Matematik();
+// math.cube(3);
+// console.log(math);
+//////////
+
+// class Matematik{
+//     static cube(x){ // static
+//        console.log(x*x*x);
+
+//    }
+// }
+// Matematik.cube(4);
+
+////////
+
+// const math=new Matematik(); //bunları kullanmaya gerek yok 
+// math.cube(3);// kullanmama nedenim proto dan erişlmez
+
+// class es6
+
+/////////////////
+
+//  class Employee2 {
+//     constructor(name2,age,salary){
+//     this.name2=name2;
+//     this.age=age;
+//     this.salary=salary
+//     // this.showInfos=function(){
+//     //     console.log("showInfos",this.name2,this.age,this.salary)
+//       }
+//     showInfos(){
+//         console.log("geldim",name2,age,salary);
+  
+//     }
+//     }
+  
+// const emp=new Employee2("ss",40,8000);// constructor
+// console.log(emp);
+
+///////////////
+
+
+// es6 kalıtım
+class Person{ //superClass,BaseClass
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    showInfos(){
+        console.log("showInfos person")
+    }
+}
+
+ class Employee extends Person{
+    constructor(name,age,salary){
+        // this.name=name;
+        // this.age=age;
+        // super();  //üst sınıfın constructor kullanma
+        // super.showInfos();
+
+        super(name,age);
+        this.salary=salary;
+    }
+    showInfos(){
+        console.log("emp",this.name,this.age,this.salary);
+    }
+    toString(){
+    console.log("employee")
+    }
+    raiseSalary(amount){
+        this.salary+=amount;
+    }
+
+ }
+
+ const emp5 =new Employee("srp",27,5000);
+ emp5.raiseSalary(500);
+ console.log(emp5);
+ emp5.showInfos();
+
+
+
+
+
+
+
 
 
 
