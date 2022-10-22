@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node pair_7.js"
+    "start": "node research.js"
   },
   "repository": {
     "type": "git",
