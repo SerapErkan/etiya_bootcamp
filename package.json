@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node research.js"
+    "start": "node promise-fetch.js",
+    "start-loops": "node loops.js"
+ 
   },
   "repository": {
     "type": "git",
