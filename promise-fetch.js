@@ -3,8 +3,8 @@
 //resolve olumlu state:resolve value(456);
 //reject  olumsuz state:reject value(error);
 
-// then olumlu -response
-//catch olumsuz -err
+// then olumlu -response    kulanım :çok kez then
+//catch olumsuz -err        kullanım :1 kez catch
 
 
 
@@ -69,3 +69,24 @@ getData(24)
 .catch(err=>console.error(err));
 
 
+function  addTwo(number){
+    return new Promise(function(resolve,reject){
+       
+        setTimeout(() => {
+            if(typeof number === "number"){
+                resolve(number+2);
+            }else{
+                reject(new Error("lütfen sayi giriniz"));
+            }
+
+        }, 5000);
+    })
+}
+
+addTwo(7).then(response=>{
+    console.log(response);
+    return response+2; // promise döner
+}).then(response2=>console.log(response2)).catch(err=>console.err(err));
+   
+//9
+//11
